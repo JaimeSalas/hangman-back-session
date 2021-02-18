@@ -31,7 +31,7 @@ pipeline {
     always {
       echo 'clean resources'
       sh 'docker-compose -f test-integration.yml down --rmi all -v'
-      cleanWs()   
+      // cleanWs()   
     }
   }
 }
