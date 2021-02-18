@@ -9,7 +9,7 @@ module.exports = {
       host: process.env.DATABASE_HOST,
       database: process.env.DATABASE_NAME,
       user: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PASSWORDª
+      password: process.env.DATABASE_PASSWORD
     },
     pool: {
       min: +process.env.DATABASE_POOL_MIN,
