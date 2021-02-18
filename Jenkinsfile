@@ -22,7 +22,10 @@ pipeline {
         sh 'docker-compose -f test-integration.yml up -d'
         script {
           def status = sh(script: 'docker wait test-integration', returnStdout: true)
-          println status
+          def statusInt = status.toInteger()
+          if (status != 0) {
+              throw new Exception("Itegration test failed you can debug by removing d flag")
+          }
         }
       } 
     }
